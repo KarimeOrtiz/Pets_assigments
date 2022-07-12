@@ -5,29 +5,75 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/mystyle.css">
-    <title>Register</title>
+    <link rel="stylesheet" href="css/styleRegister.css">
+    <script src="https://kit.fontawesome.com/7ac94db804.js" crossorigin="anonymous"></script>
+    <title>The Fashion Pet</title>
+    <link rel = "shortcut icon" href="img/pet-house.png">
 </head>
 <body>
     <header>
+        <div>
+            <a class="nav-link"><img src="img/header-pet2.gif" alt="gif" class="gif-pet"></a>
+        </div>
         <nav class="nav justify-content-end">
             <a class="nav-link active" aria-current="page" href="index.html">Home</a>
             <a class="nav-link" href="about.html">About</a>
             <a class="nav-link" href="register.html">Register</a>
             <a class="nav-link disabled">Admin</a>
         </nav>
-        <h1 class="display-1">The Fashion Pet</h1>
     </header>
 
     <main class="container">
-        <h2>Register a new pet!</h2>
+        <div class="title">
+            <h2>Register a new pet!</h2>
+            <hr>
+        </div>
+        
+        <p id="number-pets"></p>
+        <form>
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Enter pet's name" id="txtPetName">
+              </div>
+              <div class="col">
+                <input type="number" class="form-control"  placeholder="Enter pet's age" id="txtPetAge">
+              </div>
+              <div class="col"> 
+                <input type="text" class="form-control" placeholder="Enter pet's gender" id="txtPetGender">
+              </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Enter pet's breed" id="txtPetBreed">
+                </div>
+                <div class="col">
+                  <select class="form-select" name="form-select" id="selService">
+                    <option value="Nails cut" selected>Nails cut</option>
+                    <option value="Grooming">Grooming</option>
+                    <option value="Vaccines">Vaccines</option>
+                  </select>
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Enter pet's owner" id="txtPetOwner">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Enter pet's phone" id="txtPetPhone">
+                </div>
+            </div>
+        </form>
+        <div> 
+            <div class="btn-container d-grid gap-2">
+                <button class="btn btn-primary" id="btnSave" onclick="register();">Register</button>
+            </div>
+        </div>
+        
+        <p id="pet-cards" class="pets"></p>
+     
     </main>
 
-    <footer>
-        <p>All the copyrights reserved Diana Ortiz &copy; 2022</p>
-        <p id="info"></p>
-    </footer>
 
     <script src="js/register.js"></script>
 </body>
-</html> 
+</html>
