@@ -28,38 +28,37 @@
             <h2>Register a new pet!</h2>
             <hr>
         </div>
-        
         <p id="number-pets"></p>
         <form>
             <div class="row">
               <div class="col">
-                <input type="text" class="form-control" placeholder="Enter pet's name" id="txtPetName">
+                <input type="text" class="form-control" placeholder="Enter pet's name 🐕" id="txtPetName" required>
               </div>
               <div class="col">
-                <input type="number" class="form-control"  placeholder="Enter pet's age" id="txtPetAge">
+                <input type="number" class="form-control"  placeholder="Enter pet's age 🐈" id="txtPetAge">
               </div>
               <div class="col"> 
-                <input type="text" class="form-control" placeholder="Enter pet's gender" id="txtPetGender">
+                <input type="text" class="form-control" placeholder="Enter pet's gender 🐹" id="txtPetGender">
               </div>
             </div>
             <div class="row">
                 <div class="col">
-                  <input type="text" class="form-control" placeholder="Enter pet's breed" id="txtPetBreed">
+                  <input type="text" class="form-control" placeholder="Enter pet's breed 🐾" id="txtPetBreed">
                 </div>
                 <div class="col">
                   <select class="form-select" name="form-select" id="selService">
-                    <option value="Nails cut" selected>Nails cut</option>
-                    <option value="Grooming">Grooming</option>
-                    <option value="Vaccines">Vaccines</option>
+                    <option value="Nails cut" selected>Nails cut 💅</option>
+                    <option value="Grooming">Grooming 🧼</option>
+                    <option value="Vaccines">Vaccines 💉</option>
                   </select>
                 </div>
                 <div class="col">
-                  <input type="text" class="form-control" placeholder="Enter pet's owner" id="txtPetOwner">
+                  <input type="text" class="form-control" placeholder="Enter pet's owner 🧍" id="txtPetOwner">
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                  <input type="text" class="form-control" placeholder="Enter pet's phone" id="txtPetPhone">
+                  <input type="text" class="form-control" placeholder="Enter pet's phone 📱" id="txtPetPhone">
                 </div>
             </div>
         </form>
@@ -70,10 +69,29 @@
         </div>
         
         <p id="pet-cards" class="pets"></p>
-     
+            
+        
+        <div class="tbl">
+            <table class="table table-striped" id="tabla">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Gender</th>
+                        <th scope="col">Breed</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Owner</th>
+                        <th scope="col">Phone</th>
+                    </tr>
+                </thead>
+                <!--insert the tr with pet information (tbody)-->
+                <tbody id="table-pets">
+    
+                </tbody>
+            </table>
+        </div>
     </main>
 
-
     <script src="js/register.js"></script>
+    <script src="js/display.js"></script>
 </body>
 </html>

@@ -13,8 +13,6 @@ let petSalon = {
     pets:[]
 }
 
-//counter
-let c=0;
 //constructor function
 // ----------- Parameters / local variables ------------->
 function Pet(name, age, gender, breed, service, ownerName, contactPhone){
@@ -26,7 +24,6 @@ function Pet(name, age, gender, breed, service, ownerName, contactPhone){
     this.service = service;
     this.owner = ownerName;
     this.phone = contactPhone;
-    this.id = c++;
 }   
 
 //creating the functions
@@ -41,7 +38,7 @@ function displayNumberOfPets(){
 
 function isValid(aPet){
     let valid = true;
-    if(aPet.name=="" || aPet.service==""){ //is empty?
+    if(aPet.name=="" || aPet.phone=="" || aPet.ownerName){ //is empty?
         valid = false;
     }
     return valid;
@@ -62,7 +59,7 @@ function register(){
         //push the obj
         petSalon.pets.push(newPet);
         //displayCardPets();
-        //displayPetsTable();
+        displayPetsTable();
         console.log(petSalon.pets);
         displayNumberOfPets();
         clearInputs();
@@ -92,7 +89,7 @@ function init(){
     //displayInfo();
     displayNumberOfPets();
     //displayCardPets();
-    //displayPetsTable();
+    displayPetsTable();
     //hook events
 }
 
